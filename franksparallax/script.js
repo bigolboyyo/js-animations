@@ -5,16 +5,6 @@ const CANVAS_HEIGHT = (canvas.height = 700);
 
 let gameSpeed = 5;
 
-const IMAGES = [
-  "images/layer-1.png",
-  "images/layer-2.png",
-  "images/layer-3.png",
-  "images/layer-4.png",
-  "images/layer-5.png",
-];
-
-const MODIFIERS = [0.5, 0.25, 0.2, 0.5, 0.1];
-
 class Layer {
   constructor(image, speedModifier) {
     this.x = 0;
@@ -44,6 +34,16 @@ class Layer {
     ctx.drawImage(this.image, this.x2, this.y, this.width, this.height);
   }
 }
+
+const IMAGES = [
+  "images/layer-1.png",
+  "images/layer-2.png",
+  "images/layer-3.png",
+  "images/layer-4.png",
+  "images/layer-5.png",
+];
+
+const MODIFIERS = [0.5, 0.2, 0.4, 0.5, 0.1];
 
 const layerCache = () => {
   let cache = [];
