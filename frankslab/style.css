@@ -1,0 +1,26 @@
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas1 {
+  border: 5px solid black;
+  width: 600px;
+  height: 600px;
+}
+
+.controls {
+  padding: 1rem;
+}
+
+.controls,
+select,
+option {
+  font-size: 25px;
+  font-family: monospace;
+}
