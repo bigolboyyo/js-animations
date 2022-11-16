@@ -45,9 +45,10 @@ const IMAGES = [
 
 const MODIFIERS = [0.5, 0.2, 0.4, 0.5, 0.1];
 
-const layerCache = () => {
+const cacheCreation = () => {
   let cache = [];
   let layers;
+
   IMAGES.map((img) => {
     let image = new Image();
     image.src = img;
@@ -61,13 +62,13 @@ const layerCache = () => {
   return [layers, cache];
 };
 
-let layers = layerCache()[0];
-let imgCache = layerCache()[1];
+let layerCache = cacheCreation()[0];
+let imgCache = cacheCreation()[1];
 
 function animate() {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
-  layers.forEach((layer) => {
+  layerCache.forEach((layer) => {
     layer.update();
     layer.draw();
   });
